@@ -1,0 +1,65 @@
+div {
+    border: black 5px solid;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  /* div p:first-child {
+    color: red;
+  }
+  */
+div :first-child {
+    color: red;
+  }
+
+    a:link {
+    background-color:  coral;
+  }
+    a:visited {
+    background-color: lightblue;
+  }
+
+  p {
+    background-color: white;
+    color: black;
+  }
+  
+  /* p:hover {
+    background-color: lightblue;
+    color: red;
+  } */
+  p:active {
+    background-color: lightblue;
+    color: red;
+  }
+  input:focus {
+    border: red 2px dotted;
+    padding: 2px;
+  }
+  p::first-line {
+    text-transform: uppercase;
+  }
+  p::first-letter {
+    color: red;
+  }
+  p.cuidado::before {
+    content: "Nota: ";
+    font-weight: bold;
+    text-decoration: underline;
+      }
+      p.cuidado::after {
+        content: " (prova after).";
+      }
+      pre {
+        counter-reset: cuenta-parrafos;
+      }
+/*       
+      p::before {
+        content: counter(cuenta-parrafos);
+        counter-increment: cuenta-parrafos 10;
+}       */
+
+p::before {
+  content: counter(cuenta-parrafos, upper-roman)". ";
+  counter-increment: cuenta-parrafos;
+}
